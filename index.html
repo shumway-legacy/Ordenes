@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Órdenes - Taller de reparación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ordenes</h1>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="orderNumber">Número de Orden:</label>
+                <input type="text" id="orderNumber" name="orderNumber" readonly>
+            </div>
+            <div class="form-group">
+                <label for="clientName">Nombre del Cliente:</label>
+                <input type="text" id="clientName" name="clientName" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Número de Teléfono:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="computerModel">Modelo de la Computadora:</label>
+                <input type="text" id="computerModel" name="computerModel" required>
+            </div>
+            <div class="form-group">
+                <label for="issue">Problema:</label>
+                <textarea id="issue" name="issue" rows="4" required></textarea>
+            </div>
+            <button type="submit" id="submitButton">Agregar Orden</button>
+            <button type="button" id="updateButton" style="display: none;">Actualizar Orden</button>
+        </form>
+        <h2>Ordenes Registradas</h2>
+        <ul id="orderList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
